@@ -1,0 +1,21 @@
+<html>
+    <title>DC</title>
+    <head>
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <h1>Collecting Heights</h1>
+            <h4>Please fill the entries to get population statstics heights.</h4>
+            <div class="message">
+                {{text|safe}}
+            </div>
+            <form action="{{url_for('success')}}" method="post">
+                <input title="Your email wil be saved with us" placeholder="Enter your email address." type="email" name="user_email" required><br>
+                <input title="Your data wil be saved with us" placeholder="Enter your height in cm." type="number" name="user_height" min="50" max="300" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </body>
+</html>
